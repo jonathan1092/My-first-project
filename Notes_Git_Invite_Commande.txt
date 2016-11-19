@@ -1,0 +1,38 @@
+I. Créer un utilisateur
+git config --global user.name"nomUtilisatuer"
+git config --global user.email"emailUtilisateur"
+git config --global user.email(Pour voir l'email du l'utilisateur courant)
+git config --global user.name(Pour voir le nom du l'utilisateur courant)
+
+II.Créer un Repository
+   1.Aller au prélable dans le dossier du projet pour cela on fait la commande :
+      cd chemin du dossier du projet
+   2.Faire la commande git init 
+   3.Faire ls -a ou ls -la pour voir un fichier .init cela confirme la création du repository 
+III. Faire un commit(Il s'agit de dire à git d'enregistrer l'état actuel des fichiers du projet) 
+   1.Il faut d'abord informer à git les fichiers du repository qui ont subit un changement 
+     en faisant:git add nomFichier (Sur un fichier) ou 
+   		git add . (Sur tous les fichiers du projet)
+   2.git commit -m "Mettre entre ces quillemets un bref message explicatif du changement en général
+                    exemple: Cest notre premiere version "
+     git commit si tu ne veux pas faire un message
+   3.git log (Permet de voir l'historique des commit)
+     git log --author="NomUtilisateur qui a fait un changement dans le projet" (affiche historique 
+     de l'utilisateur en particulier)
+III.Lier le repository avec Bitbucket pour avoir son projet accessible en ligne
+    git remote add origin https://jeanclaudebitbucket@bitbucket.org/projectteam_qc/chams.git(cette URL s'obtient dans le repository sur BitBucket)
+    git diff: pour voir les lignes modifiées 
+    git push -u origin master
+    Mettre le mot de passe du compte Bit bucket    
+
+AUTRES COMMANDES
+pwd: montre le chemin du dossier courant
+ls: affiche le contenu d'un dossier
+ls -a ou ls -la : affiche le contenu caché du dossier du projet comme le .git 
+git status : permet d'afficher les fichiers qui ont été commit et qui ceux qui
+             peuvent être commit
+
+git checkout -- nomFichier (permet de prendre une copie de la dernière version du fichier et le 
+                            mettre dans le dossier du projet)
+git remote (montre le nom origin du point III) 
+
